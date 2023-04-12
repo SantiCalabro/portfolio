@@ -18,7 +18,7 @@
   padding-top: 20px;
 }
 .container h1:hover {
-  background-color: #0c2233;
+  background-color: #192a51;
   width: 100%;
   transition: 0.15s ease-in-out;
 }
@@ -39,7 +39,7 @@
   border-top: solid 1px #fff;
   height: 0;
   overflow: hidden;
-  background-color: #0c2233;
+  background-color: #192a51;
   padding-left: 30px;
 }
 
@@ -47,7 +47,7 @@
   transition: 0.7s ease-in-out;
   display: flex;
   border-top: solid 1px #dddddd;
-  background-color: #0c2233;
+  background-color: #192a51;
   padding-top: 30px;
   height: 80vh;
   overflow: hidden;
@@ -58,7 +58,7 @@
   transition: 0.7s ease-in-out;
   display: flex;
   border-top: solid 1px #dddddd;
-  background-color: #0c2233;
+  background-color: #192a51;
   height: 60vh;
   overflow: hidden;
   padding-left: 30px;
@@ -66,7 +66,6 @@
 .container {
   display: flex;
   flex-direction: column;
-  /* margin-top: 30px; */
 }
 .container h3 {
   margin-left: 10px;
@@ -80,15 +79,6 @@
   display: flex;
   width: 100vw;
   flex-wrap: wrap;
-  /* 
-  display: grid;
-  width: 75%;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  row-gap: 25px;
-  position: relative;
-  margin: 0 auto;
-  top: 30px;
-  padding-bottom: 30px; */
 }
 .projects {
   display: flex;
