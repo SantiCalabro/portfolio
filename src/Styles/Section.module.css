@@ -78,9 +78,9 @@
 }
 .devTech {
   display: flex;
-  /* width: 100vw; */
+  width: 100vw;
   flex-wrap: wrap;
-
+  /* 
   display: grid;
   width: 75%;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -88,7 +88,7 @@
   position: relative;
   margin: 0 auto;
   top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 30px; */
 }
 .projects {
   display: flex;
@@ -203,6 +203,14 @@
     width: 90vw;
     display: flex;
     justify-content: center;
+    display: grid;
+    width: 75%;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    row-gap: 25px;
+    position: relative;
+    margin: 0 auto;
+    top: 30px;
+    padding-bottom: 30px;
   }
   .container h3 {
     margin-left: auto;
