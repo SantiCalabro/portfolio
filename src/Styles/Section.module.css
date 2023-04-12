@@ -80,6 +80,7 @@
   width: 100vw;
   flex-wrap: wrap;
 }
+
 .projects {
   display: flex;
   width: 90vw;
@@ -113,6 +114,10 @@
   text-align: center;
   color: #0c2233;
 }
+.projectContainer h6 {
+  color: #fff;
+}
+
 .imgCont {
   display: flex;
 }
@@ -162,6 +167,7 @@
 .projectContainer img {
   width: 100%;
 }
+
 @media screen and (max-width: 767px) {
   .section {
     z-index: 900;
