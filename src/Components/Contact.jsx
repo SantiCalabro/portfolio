@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import C from "../Styles/Contact.module.css";
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
+
 export default function Contact() {
   const [input, setInput] = useState({
     user_name: "",
@@ -10,6 +11,7 @@ export default function Contact() {
   });
   const [error, setError] = useState({});
   const [disable, setDisable] = useState(true);
+  const [msg, setMsg] = useState(false);
 
   const handleChange = e => {
     setInput({ ...input, [e.target.name]: e.target.value });
@@ -74,70 +76,83 @@ export default function Contact() {
           console.log(error.text);
         }
       );
+    setMsg(true);
   };
 
   return (
-    <div id="contact" className={C.formContainer}>
-      <div className={C.headerForm}>
-        <h1>Contact me</h1>
-        <p>
-          If you have any questions, a project in mind or a comment, you can
-          write to me <strong>by completing the following form </strong>
-        </p>
+    <>
+      <div className={C.msgContainer}>
+        <div className={msg ? C.msg : C.hiddenMsg}>
+          <h1>Message sent!</h1>
+          <p>You'll get my response as soon as I read it!</p>
+          <div className={C.btnCont}>
+            <button onClick={() => setMsg(false)}>Ok!</button>
+          </div>
+        </div>
       </div>
-      <div className={C.contactForm}>
-        <form ref={form} onSubmit={sendEmail}>
-          <label>Name</label>
-          <input
-            type="text"
-            name="user_name"
-            onChange={e => {
-              handleChange(e);
-              errorSetting(e);
-            }}
-            onBlur={e => errorSetting(e)}
-          />
-          <label htmlFor="" className={C.errorLabel}>
-            {error.user_name && error.user_name}
-          </label>
+      <div className={msg && C.background}></div>
+      <div id="contact" className={C.formContainer}>
+        <div className={C.headerForm}>
+          <h1>Contact me</h1>
+          <p>
+            If you have any questions, a project in mind or a comment, you can
+            write to me <strong>by completing the following form </strong>
+          </p>
+        </div>
+        <div className={C.contactForm}>
+          <form ref={form} onSubmit={sendEmail}>
+            <label>Name</label>
+            <input
+              type="text"
+              name="user_name"
+              onChange={e => {
+                handleChange(e);
+                errorSetting(e);
+              }}
+              onBlur={e => errorSetting(e)}
+            />
+            <label htmlFor="" className={C.errorLabel}>
+              {error.user_name && error.user_name}
+            </label>
 
-          <label>Email</label>
-          <input
-            type="email"
-            name="user_email"
-            onChange={e => {
-              handleChange(e);
-              errorSetting(e);
-            }}
-            onBlur={e => errorSetting(e)}
-          />
-          <label htmlFor="" className={C.errorLabel}>
-            {error.user_email && error.user_email}
-          </label>
-          <label>Message</label>
-          <textarea
-            name="message"
-            onChange={e => {
-              handleChange(e);
-              errorSetting(e);
-            }}
-            onBlur={e => errorSetting(e)}
-          />
-          <label htmlFor="" className={C.errorLabel}>
-            {error.message && error.message}
-          </label>
-          <button
-            className={disable ? C.inactive : C.active}
-            type="submit"
-            value="Send"
-            onClick={e => {
-              disable && e.preventDefault();
-            }}
-          >
-            Send message
-          </button>
-        </form>
+            <label>Email</label>
+            <input
+              type="email"
+              name="user_email"
+              onChange={e => {
+                handleChange(e);
+                errorSetting(e);
+              }}
+              onBlur={e => errorSetting(e)}
+            />
+            <label htmlFor="" className={C.errorLabel}>
+              {error.user_email && error.user_email}
+            </label>
+            <label>Message</label>
+            <textarea
+              name="message"
+              onChange={e => {
+                handleChange(e);
+                errorSetting(e);
+              }}
+              onBlur={e => errorSetting(e)}
+            />
+            <label htmlFor="" className={C.errorLabel}>
+              {error.message && error.message}
+            </label>
+            <button
+              className={disable ? C.inactive : C.active}
+              type="submit"
+              value="Send"
+              onClick={e => {
+                disable && e.preventDefault();
+              }}
+            >
+              Send message
+            </button>
+          </form>
+        </div>
       </div>
-    </div>
+    </>
   );
 }
