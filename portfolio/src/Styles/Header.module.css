@@ -1,0 +1,30 @@
+.headerContainer {
+  padding-top: 100px;
+}
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  top: 50px;
+}
+.headerResponsive {
+  display: none;
+}
+.header img {
+  width: 50vw;
+  margin-top: -50px;
+}
+@media screen and (max-width: 767px) {
+  .headerContainer {
+    width: 90vw;
+  }
+  .headerDesktop {
+    display: none;
+  }
+  .headerResponsive {
+    display: block;
+    min-width: 330px;
+  }
+}

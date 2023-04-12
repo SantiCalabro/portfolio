@@ -1,0 +1,139 @@
+@import url(//db.onlinewebfonts.com/c/c18b9353b189d8e62455b8b5a8587321?family=Chapaza);
+@font-face {
+  font-family: "Chapaza";
+  src: url("//db.onlinewebfonts.com/t/c18b9353b189d8e62455b8b5a8587321.eot");
+  src: url("//db.onlinewebfonts.com/t/c18b9353b189d8e62455b8b5a8587321.eot?#iefix")
+      format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/c18b9353b189d8e62455b8b5a8587321.woff2")
+      format("woff2"),
+    url("//db.onlinewebfonts.com/t/c18b9353b189d8e62455b8b5a8587321.woff")
+      format("woff"),
+    url("//db.onlinewebfonts.com/t/c18b9353b189d8e62455b8b5a8587321.ttf")
+      format("truetype"),
+    url("//db.onlinewebfonts.com/t/c18b9353b189d8e62455b8b5a8587321.svg#Chapaza")
+      format("svg");
+}
+
+body {
+  background-image: url("../Images/background.png");
+  background-color: #192a51;
+}
+
+.AboutMe {
+  width: 35vw;
+  display: flex;
+  flex-direction: column;
+  border: solid 1px rgb(32, 83, 126);
+  background-color: #192a51;
+  padding: 20px;
+  padding-top: 20px;
+  border-radius: 10px;
+  margin-top: 80px;
+}
+.title {
+  height: fit-content;
+  margin-right: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  /* align-items: flex-end; */
+  /* border: solid red; */
+}
+.strong {
+  width: 75%;
+}
+.title img {
+  width: 20%;
+  border-radius: 100%;
+}
+.AboutMe h4 {
+  font-family: "Prompt", sans-serif;
+  color: #fff;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 10px;
+}
+.AboutMe p {
+  font-family: "Prompt", sans-serif;
+  color: #fff;
+  font-weight: 200;
+  margin-top: 20px;
+  text-align: center;
+}
+.title h3 {
+  font-family: "Chapaza";
+  font-weight: 500;
+  font-size: 25px;
+  color: #789b88;
+}
+
+.downBtn {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  /* height: 25vh; */
+}
+.downBtn svg {
+  fill: #fff;
+  transform: scale(2);
+  cursor: pointer;
+  border-radius: 100%;
+  margin-top: -20px;
+}
+.downBtn svg:hover {
+  fill: rgb(81, 165, 233);
+  transition: 0.15s ease-in-out;
+}
+.CV {
+  display: flex;
+}
+.CV button {
+  border: none;
+  background-color: #20537e;
+  color: #fff;
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 5px;
+  margin-top: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+
+.CV button:hover {
+  background-color: #184264;
+  transition: 0.15s ease-in-out;
+}
+.CV svg {
+  fill: #fff;
+  transform: scale(0.6);
+}
+.CV a {
+  text-decoration: none;
+}
+@media screen and (max-width: 767px) {
+  .AboutMe {
+    width: 80vw;
+  }
+  .title {
+    margin-right: 0px;
+    flex-direction: column;
+  }
+  .strong {
+    text-align: center;
+    width: 90%;
+    margin-top: 20px;
+  }
+
+  .title img {
+    width: 40%;
+    margin-top: 10px;
+  }
+  .AboutMe p {
+    text-align: center;
+  }
+}

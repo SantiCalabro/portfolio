@@ -1,0 +1,229 @@
+.section {
+  height: fit-content;
+  padding-top: 105px;
+}
+.container {
+  display: flex;
+}
+.container h1 {
+  color: #fff;
+  font-family: "Chapaza";
+  font-weight: 400;
+  font-size: 50px;
+  margin-left: 0px;
+  padding-left: 70px;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+}
+.container h1:hover {
+  background-color: #0c2233;
+  width: 100%;
+  transition: 0.15s ease-in-out;
+}
+.container svg {
+  fill: #fff;
+  margin-left: 50px;
+  rotate: 90deg;
+  transition: 0.3s ease-in-out;
+}
+
+.close {
+  transition: 0.3s ease-in-out;
+  rotate: -90deg !important;
+}
+.dropdown {
+  transition: 0.7s ease-in-out;
+  display: flex;
+  border-top: solid 1px #fff;
+  height: 0;
+  overflow: hidden;
+  background-color: #0c2233;
+  padding-left: 30px;
+}
+
+.active {
+  transition: 0.7s ease-in-out;
+  display: flex;
+  border-top: solid 1px #dddddd;
+  background-color: #0c2233;
+  padding-top: 30px;
+  height: 80vh;
+  overflow: hidden;
+  padding-left: 30px;
+}
+
+.activeProject {
+  transition: 0.7s ease-in-out;
+  display: flex;
+  border-top: solid 1px #dddddd;
+  background-color: #0c2233;
+  height: 60vh;
+  overflow: hidden;
+  padding-left: 30px;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  /* margin-top: 30px; */
+}
+.container h3 {
+  margin-left: 10px;
+  font-family: "Montserrat";
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #fff;
+}
+.devTech {
+  display: flex;
+  width: 100vw;
+  flex-wrap: wrap;
+}
+.projects {
+  display: flex;
+  width: 90vw;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+.designCont {
+  margin-top: 30px;
+}
+.techContainer {
+  width: 110px;
+  height: fit-content;
+  padding: 10px;
+  overflow: hidden;
+  background-color: #ffffff;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 10px;
+}
+.techContainer img {
+  width: 100%;
+}
+.techContainer h6,
+.projectContainer h6 {
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-size: 14px;
+  margin-top: 15px;
+  text-align: center;
+  color: #272f4d;
+}
+.imgCont {
+  display: flex;
+}
+.projectContainer {
+  display: flex;
+  padding: 10px;
+  border-radius: 10px;
+  width: 20vw;
+  height: fit-content;
+  cursor: pointer;
+  background-color: #fff;
+}
+.seeMore {
+  margin-top: 50px;
+}
+.seeMore button {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 20px;
+  cursor: pointer;
+  border: none;
+  background-color: #272f4d;
+  color: #fff;
+  font-family: "Montserrat";
+  font-size: 16px;
+  text-transform: uppercase;
+}
+.seeMore button:hover {
+  background-color: #e24861;
+  color: #fff;
+  transition: 0.15s ease-in-out;
+}
+.projectContainer:hover {
+  transition: 0.1s ease-in-out;
+  box-shadow: 3px 10px 17px -6px rgba(0, 0, 0, 0.36);
+}
+
+.projectContainer {
+  display: flex;
+  flex-direction: column;
+}
+.projectContainer img {
+  width: 100%;
+}
+@media screen and (max-width: 767px) {
+  .section {
+    z-index: 900;
+  }
+  .container h1 {
+    font-size: 30px;
+    /* margin-left: 30px; */
+    padding-left: 30px;
+  }
+  .container svg {
+    margin-left: 20px;
+    width: 20px;
+  }
+  .active {
+    height: fit-content;
+    padding: 10px;
+
+    padding-top: 50px;
+  }
+  .techContainer {
+    width: 60px;
+    height: fit-content;
+    padding: 3px;
+    border-radius: 3px;
+    margin: 5px;
+  }
+  .techContainer h6,
+  .projectContainer h6 {
+    font-size: 12px;
+  }
+  .devTech {
+    width: 90vw;
+    display: flex;
+    justify-content: center;
+  }
+  .container h3 {
+    margin-left: auto;
+    margin-bottom: 10px;
+    margin-top: -20px;
+  }
+  .dropdown {
+    padding: 0px;
+  }
+  .designCont {
+    display: flex;
+    flex-direction: column;
+  }
+  .designCont h3 {
+    margin-top: 20px;
+  }
+  .projectContainer {
+    width: 60vw;
+    margin-bottom: 20px;
+  }
+  .activeProject {
+    height: fit-content;
+    padding-left: 0px;
+
+    padding-top: 20px;
+  }
+  .projects {
+    margin-top: 0px;
+  }
+  .seeMore button {
+    position: relative;
+    bottom: 40px;
+  }
+}

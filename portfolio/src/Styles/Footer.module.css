@@ -1,0 +1,26 @@
+.container {
+  background-color: #2f3c5a;
+  display: flex;
+  align-items: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.container h3 {
+  font-family: "Chapaza";
+  font-size: 25px;
+  font-weight: 400;
+  color: #fff;
+}
+
+.brandContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.container p {
+  font-family: "Montserrat";
+  color: #fff;
+  font-weight: 200;
+  font-size: 14px;
+}

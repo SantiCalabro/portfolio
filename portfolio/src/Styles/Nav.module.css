@@ -1,0 +1,154 @@
+.Nav {
+  display: flex;
+  justify-content: space-around;
+  background-color: rgb(32, 83, 126);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding-top: 20px;
+  z-index: 800;
+  box-shadow: 0px 5px 7px -3px rgba(0, 0, 0, 0.3);
+  align-items: center;
+}
+.menuIcon {
+  display: none;
+}
+
+.brand {
+  margin-left: 30px;
+  font-family: "Chapaza";
+  font-size: 20px;
+  color: #fff;
+  position: relative;
+  bottom: 5px;
+}
+.brand h3 {
+  cursor: pointer;
+  font-weight: 200;
+}
+.menu {
+  margin-right: 30px;
+}
+.menu ul,
+.hide ul {
+  display: flex;
+  width: 42vw;
+  position: absolute;
+  right: 30px;
+  top: 20px;
+}
+.menu ul svg,
+.hide ul svg {
+  fill: #fff;
+}
+.menu ul svg:hover {
+  fill: #f5d7dc;
+  transition: 0.15s ease-in-out;
+}
+.menu li,
+.hide li {
+  list-style: none;
+  font-family: "Montserrat";
+  font-weight: 300;
+  color: #fff;
+  cursor: pointer;
+}
+.menu li:hover {
+  transition: 0.15s ease-in-out;
+  font-weight: 600;
+  color: #fff;
+}
+.icons {
+  display: flex;
+  width: 60px;
+}
+.buttonChange:hover {
+  fill: rgb(73, 153, 219);
+  transition: 0.15s ease-in-out;
+  color: rgb(73, 153, 219);
+}
+@media screen and (max-width: 767px) {
+  .Nav {
+    height: 50px;
+  }
+  .menu {
+    margin-right: 0px;
+    position: relative;
+    top: 15px;
+  }
+  .menu ul {
+    display: block;
+    height: 100vh;
+    width: 50vw;
+    position: absolute;
+    right: 0;
+    top: 0px;
+    background-color: #0c2233;
+    padding: 10px;
+    padding-right: 20px;
+    transition: all 0.5s ease-out;
+  }
+
+  .menu li {
+    margin: 0;
+    text-align: right;
+    padding: 0;
+    margin-bottom: 5px;
+    width: 100%;
+  }
+  .icons {
+    display: flex;
+    width: fit-content;
+    margin-right: 0;
+    margin-top: 20px;
+  }
+  .icons svg {
+    margin-left: 10px;
+  }
+  .hide {
+    margin-right: 0px;
+    position: relative;
+    top: 15px;
+  }
+  .hide ul {
+    transition: all 0.5s ease-out;
+    display: block;
+    width: fit-content;
+    height: 100vh;
+    width: 25vw;
+    position: absolute;
+    right: 0;
+    background-color: transparent;
+    padding: 10px;
+    right: 0px;
+    top: 0px;
+  }
+
+  .hide li {
+    display: none;
+    height: 100vh;
+    width: 40vw;
+    padding: 10px;
+    transition: all 0.5s ease-out;
+  }
+
+  .menuIcon {
+    display: block;
+    fill: #fff;
+    position: absolute;
+    top: 10px;
+    width: 40px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 600;
+  }
+  .brand h3 {
+    margin-top: 0px;
+    left: 10px;
+    position: unset;
+    position: absolute;
+    width: 300px;
+    top: 0;
+    margin-top: -20px;
+  }
+}
