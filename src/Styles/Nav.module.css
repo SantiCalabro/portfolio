@@ -189,6 +189,7 @@
     border-top: none;
     border-left: none;
     width: 100vw;
-    background-color: #14203d;
+    color: #14203d;
+    background-color: #fff;
   }
 }
