@@ -3,29 +3,41 @@ import H from "../Styles/Home.module.css";
 import { Link } from "react-scroll";
 import me from "../Images/me.jpg";
 import resume from "../Images/Resume.pdf";
+import { useSelector } from "react-redux";
+
 export default function Home() {
+  const lang = useSelector(state => state.lang);
+
+  const ESP = "Español";
+  const ENG = "English";
+
   return (
     <div className={H.body} id="home">
       <div className={H.AboutMe}>
         <div className={H.title}>
           <img src={me} alt="" />
           <h4 className={H.strong}>
-            I’m Santiago Calabró, a web developer and graphic designer from
-            Argentina.{" "}
+            {lang === ENG
+              ? `I’m Santiago Calabró, a web developer and graphic designer from
+            Argentina.`
+              : "Soy Santiago Calabró, Desarrollador Web y Diseño Gráfico de Argentina"}
           </h4>
         </div>
         <div className={H.description}>
           <p>
-            I love to spare my free time learning new technologies and coding
+            {lang === ENG
+              ? `I love to spare my free time learning new technologies and coding
             projects. I’m very curious and everything I don’t know (yet)
             represents a challenge for me. Welcome to my portfolio, hope you
-            enjoy it!
+            enjoy it!`
+              : "Amo pasar mi tiempo libre aprendiendo nuevas tecnologías y codeando proyectos. Soy muy curioso, y todo aquello aún no conozco, representa un desafío para mí. Bienvenido/a a mi portfolio, espero que lo disfrutes!"}
           </p>
 
           <div className={H.CV}>
             <a href={resume} download="Resume">
               <button>
-                Download my CV
+                {lang === ENG ? ` Download my CV` : "Descargar mi CV"}
+
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"

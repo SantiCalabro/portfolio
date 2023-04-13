@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import C from "../Styles/Contact.module.css";
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
+import { useSelector } from "react-redux";
 
 export default function Contact() {
   const [input, setInput] = useState({
@@ -12,6 +13,10 @@ export default function Contact() {
   const [error, setError] = useState({});
   const [disable, setDisable] = useState(true);
   const [msg, setMsg] = useState(false);
+  const lang = useSelector(state => state.lang);
+
+  const ESP = "Español";
+  const ENG = "English";
 
   const handleChange = e => {
     setInput({ ...input, [e.target.name]: e.target.value });
@@ -83,8 +88,12 @@ export default function Contact() {
     <>
       <div className={C.msgContainer}>
         <div className={msg ? C.msg : C.hiddenMsg}>
-          <h1>Message sent!</h1>
-          <p>You'll get my response as soon as I read it!</p>
+          <h1>{lang === ENG ? `Message sent!` : "Mensaje enviado!"}</h1>
+          <p>
+            {lang === ENG
+              ? `You'll get my response as soon as I read it!`
+              : "Recibirás mi respuesta a penas lo haya leído!"}
+          </p>
           <div className={C.btnCont}>
             <button onClick={() => setMsg(false)}>Ok!</button>
           </div>
@@ -93,15 +102,17 @@ export default function Contact() {
       <div className={msg && C.background}></div>
       <div id="contact" className={C.formContainer}>
         <div className={C.headerForm}>
-          <h1>Contact me</h1>
+          <h1>{lang === ENG ? `Contact me` : "Contáctame"}</h1>
           <p>
-            If you have any questions, a project in mind or a comment, you can
-            write to me <strong>by completing the following form </strong>
+            {lang === ENG
+              ? ` If you have any questions, a project in mind or a comment, you can
+            write to me by completing the following form.`
+              : `Si tenés alguna pregunta, un proyecto en mente o algún comentario, podés escribirme completando el siguiente formulario `}
           </p>
         </div>
         <div className={C.contactForm}>
           <form ref={form} onSubmit={sendEmail}>
-            <label>Name</label>
+            <label>{lang === ENG ? `Name` : "Nombre"}</label>
             <input
               type="text"
               name="user_name"
@@ -128,7 +139,7 @@ export default function Contact() {
             <label htmlFor="" className={C.errorLabel}>
               {error.user_email && error.user_email}
             </label>
-            <label>Message</label>
+            <label>{lang === ENG ? `Message` : "Mensaje"}</label>
             <textarea
               name="message"
               onChange={e => {
@@ -148,7 +159,7 @@ export default function Contact() {
                 disable && e.preventDefault();
               }}
             >
-              Send message
+              {lang === ENG ? `Send message` : "Enviar mensaje"}
             </button>
           </form>
         </div>

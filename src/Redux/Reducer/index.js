@@ -1,7 +1,8 @@
-import { OPEN_SECTION } from "../Actions/ActionNames";
+import { OPEN_SECTION, SET_LANG } from "../Actions/ActionNames";
 
 const initialState = {
   section: "",
+  lang: "English",
 };
 
 function rootReducer(state = initialState, action) {
@@ -10,6 +11,11 @@ function rootReducer(state = initialState, action) {
       return {
         ...state,
         section: action.payload,
+      };
+    case SET_LANG:
+      return {
+        ...state,
+        lang: action.payload,
       };
     default:
       return state;

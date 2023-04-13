@@ -26,6 +26,11 @@
   cursor: pointer;
   font-weight: 200;
 }
+.menuContainer {
+  display: flex;
+  position: absolute;
+  right: 30px;
+}
 .menu {
   margin-right: 30px;
 }
@@ -33,8 +38,6 @@
 .hide ul {
   display: flex;
   width: 42vw;
-  position: absolute;
-  right: 30px;
   top: 20px;
 }
 .menu ul svg,
@@ -62,10 +65,29 @@
   display: flex;
   width: 60px;
 }
+
 .buttonChange:hover {
   fill: rgb(73, 153, 219);
   transition: 0.15s ease-in-out;
   color: rgb(73, 153, 219);
+}
+.lang {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  border: solid 1px #fff;
+  border-radius: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  color: #fff;
+}
+
+.lang:hover {
+  transition: 0.15s ease-in-out;
+  background-color: #fff;
+  color: #192a51;
 }
 @media screen and (max-width: 767px) {
   .Nav {
@@ -86,7 +108,9 @@
     background-color: #192a51;
     padding: 10px;
     padding-right: 20px;
+    padding-top: 50px;
     transition: all 0.5s ease-out;
+    box-shadow: -5px 3px 12px 0px rgba(0, 0, 0, 0.3);
   }
 
   .menu li {
@@ -150,5 +174,21 @@
     width: 300px;
     top: 0;
     margin-top: -20px;
+  }
+  .menuContainer {
+    display: flex;
+    position: absolute;
+    right: 0px;
+  }
+  .lang {
+    position: fixed;
+    left: 0px;
+    top: 50px;
+    border-radius: 0;
+    border-right: none;
+    border-top: none;
+    border-left: none;
+    width: 100vw;
+    background-color: #14203d;
   }
 }

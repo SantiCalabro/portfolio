@@ -11,6 +11,10 @@ export default function Section() {
   });
 
   const section = useSelector(state => state.section);
+  const lang = useSelector(state => state.lang);
+
+  const ESP = "Español";
+  const ENG = "English";
 
   const devTech = [
     {
@@ -148,7 +152,8 @@ export default function Section() {
         onClick={e => handleOpen(e.target.id)}
       >
         <h1 id="stack" onClick={e => handleOpen(e.target.id)}>
-          My stack
+          {lang === ENG ? `My stack` : "Mi stack"}
+
           <svg
             id="stack"
             onClick={e => handleOpen(e.target.id)}
@@ -164,7 +169,7 @@ export default function Section() {
       </div>
       <div className={active.stack ? S.active : S.dropdown}>
         <div className={S.container}>
-          <h3>Developement </h3>
+          <h3>{lang === ENG ? `Developement` : "Desarrollo"}</h3>
           <div className={S.devTech}>
             {devTech.length &&
               devTech.map((el, i) => (
@@ -177,7 +182,7 @@ export default function Section() {
               ))}
           </div>
           <div className={S.designCont}>
-            <h3>Design</h3>
+            <h3>{lang === ENG ? `Design` : "Diseño"}</h3>
             <div className={S.devTech}>
               {designTech.length &&
                 designTech.map((el, i) => (
@@ -198,7 +203,8 @@ export default function Section() {
         onClick={e => handleOpen(e.target.id)}
       >
         <h1 id="projects" onClick={e => handleOpen(e.target.id)}>
-          Development
+          {lang === ENG ? `Development` : "Desarrollo"}
+
           <svg
             id="projects"
             onClick={e => handleOpen(e.target.id)}
@@ -229,7 +235,7 @@ export default function Section() {
           </div>
           {projects.length > 3 && (
             <div className={S.seeMore}>
-              <button>See more</button>
+              <button>{lang === ENG ? `See more` : "Ver más"}</button>
             </div>
           )}
         </div>
@@ -241,7 +247,8 @@ export default function Section() {
         onClick={e => handleOpen(e.target.id)}
       >
         <h1 id="fun" onClick={e => handleOpen(e.target.id)}>
-          Design
+          {lang === ENG ? `Design` : "Diseño"}
+
           <svg
             id="fun"
             onClick={e => handleOpen(e.target.id)}
@@ -272,7 +279,7 @@ export default function Section() {
           </div>
           {designProjects.length > 3 && (
             <div className={S.seeMore}>
-              <button>See more</button>
+              <button> {lang === ENG ? `See more` : "Ver más"}</button>
             </div>
           )}
         </div>
