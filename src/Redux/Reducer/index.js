@@ -2,7 +2,7 @@ import { OPEN_SECTION, SET_LANG } from "../Actions/ActionNames";
 
 const initialState = {
   section: "",
-  lang: "English",
+  lang: "Español",
 };
 
 function rootReducer(state = initialState, action) {

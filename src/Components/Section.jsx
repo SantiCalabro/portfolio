@@ -115,10 +115,15 @@ export default function Section() {
       img: "https://res.cloudinary.com/dcbswyqrd/image/upload/v1681182952/nico_pic_fe2whi.jpg",
       link: "https://www.behance.net/gallery/168094383/Sexbox-Sex-Shop?",
     },
+    // {
+    //   name: "Biosense - Manual normativo",
+    //   img: "https://res.cloudinary.com/dcbswyqrd/image/upload/v1681233991/biosense_qhs93c.jpg",
+    //   link: "https://issuu.com/santicalabro/docs/manual_normativo_-_biosense",
+    // },
     {
-      name: "Biosense - Manual normativo",
-      img: "https://res.cloudinary.com/dcbswyqrd/image/upload/v1681233991/biosense_qhs93c.jpg",
-      link: "https://issuu.com/santicalabro/docs/manual_normativo_-_biosense",
+      name: "Convención de Tattoo de La Plata",
+      img: "  https://res.cloudinary.com/dcbswyqrd/image/upload/v1681648967/header_romiup.jpg",
+      link: "https://www.behance.net/gallery/168483829/Convencion-de-Tattoo-Proyecto-de-graduacion",
     },
   ];
 

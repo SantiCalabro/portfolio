@@ -20,7 +20,7 @@ export default function Home() {
             {lang === ENG
               ? `I’m Santiago Calabró, a web developer and graphic designer from
             Argentina.`
-              : "Soy Santiago Calabró, Desarrollador Web y Diseño Gráfico de Argentina"}
+              : "Soy Santiago Calabró, Desarrollador Web y Diseñador Gráfico de Argentina"}
           </h4>
         </div>
         <div className={H.description}>
@@ -30,7 +30,7 @@ export default function Home() {
             projects. I’m very curious and everything I don’t know (yet)
             represents a challenge for me. Welcome to my portfolio, hope you
             enjoy it!`
-              : "Amo pasar mi tiempo libre aprendiendo nuevas tecnologías y codeando proyectos. Soy muy curioso, y todo aquello aún no conozco, representa un desafío para mí. Bienvenido/a a mi portfolio, espero que lo disfrutes!"}
+              : "Me encanta pasar mi tiempo libre aprendiendo nuevas tecnologías y codeando proyectos. Soy muy curioso, y todo aquello aún no conozco, representa un desafío para mí. Bienvenido/a a mi portfolio, espero que lo disfrutes!"}
           </p>
 
           <div className={H.CV}>

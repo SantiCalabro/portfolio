@@ -17,10 +17,10 @@ export default function Nav() {
   const ENG = "English";
 
   const handleLanguage = () => {
-    if (lang === "English") {
-      dispatch(setLanguage("Español"));
-    } else {
+    if (lang === "Español") {
       dispatch(setLanguage("English"));
+    } else {
+      dispatch(setLanguage("Español"));
     }
   };
 

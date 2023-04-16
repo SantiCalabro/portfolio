@@ -79,9 +79,9 @@
   border-radius: 5px;
   padding-left: 15px;
   padding-right: 15px;
-  padding-top: 5px;
-  padding-bottom: 5px;
   color: #fff;
+  position: relative;
+  bottom: 2px;
 }
 
 .lang:hover {
@@ -160,7 +160,7 @@
     display: block;
     fill: #fff;
     position: absolute;
-    top: 10px;
+    top: 5px;
     width: 40px;
     right: 20px;
     cursor: pointer;
@@ -189,6 +189,9 @@
     border-top: none;
     border-left: none;
     width: 100vw;
+    height: 30px;
+    font-size: 16px;
+    font-weight: 600;
     color: #14203d;
     background-color: #fff;
   }
