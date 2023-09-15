@@ -2,7 +2,7 @@ import React from "react";
 import H from "../Styles/Home.module.css";
 import { Link } from "react-scroll";
 import me from "../Images/me.jpg";
-import resume from "../Images/Resume.pdf";
+import resume from "../Images/Resume-Santiago-Calabro.pdf";
 import { useSelector } from "react-redux";
 
 export default function Home() {
@@ -14,16 +14,16 @@ export default function Home() {
   return (
     <div className={H.body} id="home">
       <div className={H.AboutMe}>
-        <div className={H.title}>
+        <div className={H.image}>
           <img src={me} alt="" />
-          <h4 className={H.strong}>
-            {lang === ENG
-              ? `I’m Santiago Calabró, a web developer and graphic designer from
-            Argentina.`
-              : "Soy Santiago Calabró, Desarrollador Web y Diseñador Gráfico de Argentina"}
-          </h4>
         </div>
         <div className={H.description}>
+          <h4 className={H.strong}>
+            {lang === ENG
+              ? `Hi! I’m Santiago, a web developer and graphic designer from
+            Argentina.`
+              : "Hola! Soy Santiago, Desarrollador Web y Diseñador Gráfico de Argentina"}
+          </h4>
           <p>
             {lang === ENG
               ? `I love to spare my free time learning new technologies and coding

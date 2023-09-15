@@ -111,7 +111,7 @@ export default function Contact() {
           </p>
         </div>
         <div className={C.contactForm}>
-          <form ref={form} onSubmit={sendEmail}>
+          <form ref={form} autocomplete="off" onSubmit={sendEmail}>
             <label>{lang === ENG ? `Name` : "Nombre"}</label>
             <input
               type="text"

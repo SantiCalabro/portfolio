@@ -20,9 +20,8 @@ body {
 }
 
 .AboutMe {
-  width: 35vw;
+  width: 60vw;
   display: flex;
-  flex-direction: column;
   border: solid 1px rgb(32, 83, 126);
   background-color: #192a51;
   padding: 20px;
@@ -30,35 +29,37 @@ body {
   border-radius: 10px;
   margin-top: 80px;
 }
-.title {
-  height: fit-content;
+.image {
   margin-right: 20px;
-  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  /* align-items: flex-end; */
-  /* border: solid red; */
 }
+
 .strong {
   width: 75%;
 }
-.title img {
-  width: 20%;
-  border-radius: 100%;
+.image img {
+  width: 100%;
+  border-radius: 10px;
 }
 .AboutMe h4 {
   font-family: "Prompt", sans-serif;
   color: #fff;
+  font-size: 20px;
   font-weight: 600;
   text-align: center;
   margin-top: 10px;
+  margin-left: 0;
+  text-align: left;
+  width: 60%;
 }
 .AboutMe p {
   font-family: "Prompt", sans-serif;
   color: #fff;
   font-weight: 200;
   margin-top: 20px;
-  text-align: center;
+  text-align: left;
 }
 .title h3 {
   font-family: "Chapaza";
@@ -66,12 +67,13 @@ body {
   font-size: 25px;
   color: #789b88;
 }
-
+.description {
+  width: 100%;
+}
 .downBtn {
   display: flex;
   justify-content: center;
   margin-top: 40px;
-  /* height: 25vh; */
 }
 .downBtn svg {
   fill: #fff;
@@ -84,9 +86,7 @@ body {
   fill: rgb(81, 165, 233);
   transition: 0.15s ease-in-out;
 }
-.CV {
-  display: flex;
-}
+
 .CV button {
   border: none;
   background-color: #20537e;
@@ -102,6 +102,7 @@ body {
   font-weight: 600;
   display: flex;
   align-items: center;
+  margin-left: 0;
 }
 
 .CV button:hover {
@@ -118,11 +119,13 @@ body {
 @media screen and (max-width: 767px) {
   .AboutMe {
     width: 80vw;
+    flex-direction: column;
   }
-  .title {
+  .image {
     margin-right: 0px;
     flex-direction: column;
   }
+
   .strong {
     text-align: center;
     width: 90%;
@@ -133,7 +136,13 @@ body {
     width: 40%;
     margin-top: 10px;
   }
-  .AboutMe p {
+
+  .AboutMe p,
+  .AboutMe h4 {
     text-align: center;
+    width: 100%;
+  }
+  .CV button {
+    margin-left: auto;
   }
 }

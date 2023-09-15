@@ -119,7 +119,7 @@ export default function Nav() {
             </Link>
             <div className={N.icons}>
               <a
-                href="https://www.linkedin.com/in/santiago-calabr%C3%B3-5b7354219/"
+                href="https://www.linkedin.com/in/santiago-calabr%C3%B3-70a37a287/"
                 target="_blank"
                 rel="noreferrer"
               >

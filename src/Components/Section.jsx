@@ -89,18 +89,21 @@ export default function Section() {
   const projects = [
     {
       name: "Play Expert",
-      img: "https://res.cloudinary.com/dcbswyqrd/image/upload/v1676649954/1674495812337_x24in1.jpg",
+      img: "https://res.cloudinary.com/dcbswyqrd/image/upload/v1694727660/play_expert_a2yhjw.jpg",
       link: "https://www.youtube.com/watch?v=XF-85eYLBoc",
+      repo: "https://github.com/pccomponentshenry/ecommerce_front/tree/main/src",
     },
     {
-      name: "Pet Planet",
-      img: "https://res.cloudinary.com/dcbswyqrd/image/upload/v1677798863/petplanet_ccwmyf.jpg",
-      link: "https://youtu.be/y4CIjsheJDA",
+      name: "Galletitas camet",
+      img: "https://res.cloudinary.com/dcbswyqrd/image/upload/v1694727661/camet_s05rir.jpg",
+      link: "https://www.galletitascamet.com.ar/",
+      repo: "https://github.com/SantiCalabro/galletitascamet",
     },
     {
       name: "Catálogo Rocambole Art",
-      img: "https://res.cloudinary.com/dcbswyqrd/image/upload/v1681084359/Rocamboleweb_jm8n92.jpg",
+      img: "https://res.cloudinary.com/dcbswyqrd/image/upload/v1694727660/rocambole_ndag3m.jpg",
       link: "https://rocamboleart-1-qaq6.vercel.app/",
+      repo: "https://github.com/SantiCalabro/rocamboleWeb",
     },
   ];
 
@@ -110,16 +113,16 @@ export default function Section() {
       img: "https://res.cloudinary.com/dcbswyqrd/image/upload/v1681175015/lcv_pic_pw0hvy.jpg",
       link: "https://www.behance.net/gallery/168089317/La-Costa-Viral",
     },
-    {
-      name: "Sexbox",
-      img: "https://res.cloudinary.com/dcbswyqrd/image/upload/v1681182952/nico_pic_fe2whi.jpg",
-      link: "https://www.behance.net/gallery/168094383/Sexbox-Sex-Shop?",
-    },
     // {
-    //   name: "Biosense - Manual normativo",
-    //   img: "https://res.cloudinary.com/dcbswyqrd/image/upload/v1681233991/biosense_qhs93c.jpg",
-    //   link: "https://issuu.com/santicalabro/docs/manual_normativo_-_biosense",
+    //   name: "Sexbox",
+    //   img: "https://res.cloudinary.com/dcbswyqrd/image/upload/v1681182952/nico_pic_fe2whi.jpg",
+    //   link: "https://www.behance.net/gallery/168094383/Sexbox-Sex-Shop?",
     // },
+    {
+      name: "Biosense - Manual normativo",
+      img: "https://res.cloudinary.com/dcbswyqrd/image/upload/v1681233991/biosense_qhs93c.jpg",
+      link: "https://issuu.com/santicalabro/docs/manual_normativo_-_biosense",
+    },
     {
       name: "Convención de Tattoo de La Plata",
       img: "  https://res.cloudinary.com/dcbswyqrd/image/upload/v1681648967/header_romiup.jpg",
@@ -230,11 +233,25 @@ export default function Section() {
               projects.map((el, i) => (
                 <div key={i} className={S.projectContainer}>
                   <div className={S.projectImgCont}>
-                    <a href={el.link} target="_blank" rel="noreferrer">
-                      <img src={el.img} alt="" />{" "}
-                    </a>
+                    <img src={el.img} alt="" />{" "}
                   </div>
                   <h6>{el.name}</h6>
+                  <div className={S.btnContainer}>
+                    <div className={S.btn}>
+                      <a href={el.link} target="_blank" rel="noreferrer">
+                        <button>
+                          {lang === "English" ? "Visit" : "Visitar"}
+                        </button>
+                      </a>
+                      <a href={el.repo} target="_blank" rel="noreferrer">
+                        <button>
+                          {lang === "English"
+                            ? "Watch repository"
+                            : "Ver repositorio"}
+                        </button>
+                      </a>
+                    </div>
+                  </div>
                 </div>
               ))}
           </div>

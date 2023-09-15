@@ -53,7 +53,37 @@
   overflow: hidden;
   padding-left: 30px;
 }
+.btnContainer {
+  border-top: solid 1px #fff;
+  width: 100%;
+  display: flex;
+}
+.btn {
+  width: 100%;
+  display: flex;
+  margin-top: 10px;
+  justify-content: space-around;
+}
 
+.btn button {
+  border: solid 1px rgb(73, 153, 219);
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 30px;
+  font-weight: 600;
+  background-color: transparent;
+  color: rgb(73, 153, 219);
+
+  cursor: pointer;
+}
+.btn button:hover {
+  transition: 0.15s ease-in-out;
+  background-color: rgb(73, 153, 219);
+  color: #0c2233;
+  box-shadow: 3px 10px 17px -6px rgba(0, 0, 0, 0.36);
+}
 .activeProject {
   transition: 0.7s ease-in-out;
   display: flex;
@@ -111,6 +141,7 @@
   font-weight: 400;
   font-size: 14px;
   margin-top: 5px;
+  margin-bottom: 5px;
   text-align: center;
   color: #0c2233;
 }
