@@ -46,6 +46,7 @@ export default function Nav() {
           fill-rule="nonzero"
         />
       </svg>
+
       <div className={N.menuContainer}>
         <div className={nav ? N.menu : N.hide}>
           <ul>
@@ -159,6 +160,8 @@ export default function Nav() {
           {lang === ENG ? `Traducir` : `Translate`}
         </button>
       </div>
+
+      <div className={nav === true && N.menuBackground}> </div>
     </div>
   );
 }
